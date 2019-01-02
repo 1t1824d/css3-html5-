@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>css3 html5文字霓虹灯交替闪烁效果</title>
+
+  <style>
+    #glow {
+      height: 300px;
+      width: 400px;
+      height: 36px;
+      color: rgb(17, 230, 63);
+      background-color: rgb(16, 22, 22)
+    }
+    .son {
+      -webkit-animation: bglow 1s ease infinite;
+    }
+/* .son {
+-webkit-animation: mglow 3s ease infinite;
+} */
+    .son {
+      -webkit-animation: rglow 3s ease infinite;
+    }
+
+    @-webkit-keyframes bglow {
+      0% {
+        color: #ff0000;
+        text-shadow: 0 0 15px;
+      }
+    }
+/* @-webkit-keyframes mglow {
+50% {
+color: rgb(145, 32, 40);
+text-shadow: 0 0 15px;
+}
+} */
+    @-webkit-keyframes rglow {
+      100% {
+        color: #940202;
+        text-shadow: 0 0 15px;
+      }
+
+    }
+
+  </style>
+
+
+</head>
+
+<body>
+
+  <div id="glow">
+    <div class="son">00:30:00</div>
+  </div>
+
+
+
+</body>
+
+</html>

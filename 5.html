@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>demo</title>
+  <style>
+    #div1 {
+      font-size: 16px;
+      width: 200px;
+      height: 200px;
+      background-color: #0FB2D4;
+      float: right;
+      opacity: 0.5;
+      /* filter: alpha(opacity:50); */
+    }
+
+  </style>
+</head>
+
+<body>
+  <div id="div1" style="color:red">123</div>
+  <script>
+    var oDiv = document.getElementById("div1");
+
+    function getStyle(ele, name) {
+      if (oDiv.style.styleFloat) {
+        return oDiv.style.styleFloat; //ie下float处理
+      } else if (oDiv.style.cssFloat) {
+        return oDiv.style.cssFloat; //火狐等float处理
+      }
+      if (oDiv.currentStyle) {
+        return oDiv.currentStyle[name];
+      } else {
+        return getComputedStyle(oDiv, false)[name];
+      }
+    }
+    console.log(getStyle(oDiv, "width"));
+    console.log(getStyle(oDiv, "opacity"));
+    console.log(getStyle(oDiv, "float"));
+    console.log(getStyle(oDiv, "backgroundColor"));
+
+  </script>
+</body>
+
+</html>
